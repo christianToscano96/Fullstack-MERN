@@ -25,6 +25,10 @@ module.exports = function() {
         pacienteController.actualizarPaciente
     );
 
+    //Eliminar un registro con una ID especifico
+    router.delete('/pacientes/:id',
+        pacienteController.eliminarPaciente
+    );
 
     return router;
 }
