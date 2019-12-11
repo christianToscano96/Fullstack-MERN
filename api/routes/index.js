@@ -6,8 +6,14 @@ module.exports = function() {
 
     //agrega nuevos pacientes via POST
     router.post('/pacientes',
-    pacienteController.nuevoCliente
-    )
+        pacienteController.nuevoCliente
+    );
+
+    //obtiene todos los registros de pacientes en la bd
+    router.get('/pacientes',
+        pacienteController.obtenerPacientes
+    );
+
 
     return router;
 }
