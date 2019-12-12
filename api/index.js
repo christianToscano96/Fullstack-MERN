@@ -3,9 +3,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 //crear el sercidor
 const app = express();
+
+//hsbilitar cors
+app.use(cors());
 
 //conectar a mongoodb
 mongoose.Promise = global.Promise;
